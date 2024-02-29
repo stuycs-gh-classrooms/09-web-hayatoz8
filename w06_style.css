@@ -90,11 +90,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-<nav class="menu">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="p0.html">Sedans</a></li>
-    <li class="active"><a href="p1.html">Sports Cars</a></li>
-    <li><a href="p2.html">SUVs</a></li>
-  </ul>
-</nav>
