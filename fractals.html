@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Hayato's Fractals</title>
+  </head>
+  <h1>Hayato's Fractal Modifications</h1>
+  <h2>Koch Curve</h2>
+    <p>
+      Normal Koch Curve koch_curve(t, 4, 1000)
+    </p>
+  <img src="koch_curve.png" alt="Normal Koch Curve">
+   
+     <p> This is a modified Koch Curve where the colors are randomized from a set of 5 colors, and there is an extra recursion that occurs in bewteen the third and fourth recursion.</p>
+     <pre><code>
+    def modified_koch_curve(t, depth, size):
+    colors = ["black", "gray", "red", "silver", "purple"]
+    t.color(colors[random.randrange(5)])
+    if depth == 1:
+        t.fd(size)
+    else:
+        size=size/depth
+        modified_koch_curve(t, depth - 1, size)
+        t.lt(60)
+        modified_koch_curve(t, depth - 1, size)
+        t.rt(120)
+        modified_koch_curve(t, depth - 1, size)
+        t.rt(120)
+        modified_koch_curve(t, depth - 1, size)
+        t.lt(180)
+        modified_koch_curve(t, depth - 1, size)
+        modified_koch_curve(t, depth - 1, size)
+
+    </code></pre>
+  <img src="modified_koch_curve.png" alt="Modified Koch Curve">
+
+ <h2>Sierpinski Triangle</h2>
+<p>Normal Sierpinski Triangle sierpinski(t, 5, 500)</p>
+
+ <img src="sierpinski.png" alt="Normal Sierpinski Triangle">
+
+
+ <p> This is a modified Sierpinski Triangle where the turtle is only has its pen down for half the distance of each line. The color of the pen is also being randomly chosen so that each triangle will always have a combination of triad colors. modified_sierpinski(t, 5, 500)</p>
+
+  <img src="modified_sierpinski.png" alt="Modified Sierpinski Triangle">
+  <pre><code>
+    def modified_sierpinski(t, depth, size):
+    a=3 * random.randrange(3)
+    colors=['yellow', 'red', 'blue', 'green', 'orange', 'purple', 'teal', 'magenta', 'gold']
+    if depth == 1:
+         t.lt(60)
+         t.color(colors[a])
+         t.fd(size/2)
+         t.pu
+         t.fd(size/2)
+         t.pd()
+         t.rt(120)
+         t.color(colors[a+1])
+         t.fd(size/2)
+         t.pu()
+         t.fd(size/2)
+         t.color(colors[a+2])
+         t.pd()
+         t.rt(120)
+         t.fd(size/2)
+         t.pu()
+         t.fd(size/2)
+         t.pd()
+         t.rt(180)
+
+    else:
+        modified_sierpinski(t, depth-1, size/2)
+        t.pu()
+        t.fd(size/2)
+        t.pd()
+        modified_sierpinski(t, depth-1, size/2)
+        t.pu()
+        t.bk(size/2)
+        t.pd()
+        t.lt(60)
+        t.pu()
+        t.fd(size/2)
+        t.pd()
+        t.rt(60)
+        modified_sierpinski(t, depth-1, size/2)
+        t.rt(120)
+        t.pu()
+        t.fd(size/2)
+        t.lt(120)
+</code></pre>
+
+ <h2>Tree</h2>
+
+<p>Normal Tree tree(t, 4, 50, 20)</p>
+ <img src="tree.png" alt="Normal Tree">
+  <p> This is a modified Tree where as the recursion depth decreases, the line width and length decreases, resulting in a tapering effect towards the ends of the branches. modified_tree(t, 4, 50, 20, 3)</p>
+  <img src="modified_tree.png" alt="Modified Tree">
+  <pre><code>
+    def modified_tree(t, depth, size, angle, width_factor):
+    if depth == 1:
+        t.width(1)
+        t.fd(size)
+        t.pu()
+        t.bk(size)
+        t.pd()
+    else:
+        t.width(depth * width_factor)
+        t.fd(size)
+        t.rt(angle)
+        modified_tree(t, depth-1, size * 0.8, angle, width_factor)
+        t.lt(2 * angle)
+        modified_tree(t, depth-1, size * 0.8, angle, width_factor)
+        t.rt(angle)
+        t.pu()
+        t.bk(size)
+  </code></pre>
+
+
+
+
+</html>
