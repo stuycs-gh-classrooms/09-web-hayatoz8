@@ -5,19 +5,18 @@ body {
 
 .container {
   background-color: #fff; 
-  padding: 20px;
   margin: 20px auto;
   max-width: 800px;
 }
 
 h1, h2 {
-  color: #007bff;
+  color: #666;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.5;
-}
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5
 
 img {
   max-width: 100%;
@@ -26,9 +25,8 @@ img {
 
 pre {
   font-size: 14px;
-  background-color: #f8f9fa;
-  padding: 10px;
-  overflow-x: auto;
+  color: #666;
+  font-family: Consolas, monospace;
 }
 
 code {
