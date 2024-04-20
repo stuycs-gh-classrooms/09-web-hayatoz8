@@ -1,48 +1,35 @@
-body, h1, h2, p, img, pre, code {
-  margin: 0;
-  padding: 0;
-}
 body {
-  font-family: Arial, sans-serif;
-  color: red;
+  background-color: #666;
+  color: #333; 
+}
+
+.container {
+  background-color: #fff; 
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
 }
 
 h1, h2 {
-  text-align: center;
+  color: #007bff;
 }
 
 p {
-  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-.img-container {
-  text-align: center;
-}
-
-h1 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: blue;
-}
-
-code {
-  font-family: "Courier New", monospace;
-}
 img {
-  display: block;
-  margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
-#koch-curve, #modified-koch-curve, #sierpinski-triangle, #modified-sierpinski, #tree, #modified-tree {
-  width: 80%;
-}
-img {
-  border: 2px solid #ccc;
+
+pre {
+  font-size: 14px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  overflow-x: auto;
 }
 
+code {
+  font-family: Consolas, monospace;
