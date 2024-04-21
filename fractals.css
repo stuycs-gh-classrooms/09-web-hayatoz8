@@ -1,32 +1,18 @@
-
-.container {
-  margin: 20px auto;
-  max-width: 800px;
+body {
+  font-family: Arial, sans-serif;
+  color: gray;
 }
+
 h1 {
-  color: #000;
   text-align: center;
+  color: black;
 }
-
-
-h2 {
-  color: #666;
-}
-
-p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.5
-
-img {
-  max-width: 200px;
-  height: auto;
 
 pre {
-  font-size: 14px;
-  color: #666;
-  font-family: Consolas, monospace;
+  font-size: 0.9em;
 }
 
-code {
-  font-family: Consolas, monospace;
+img {
+  max-width: 100%;
+  height: auto;
+}
