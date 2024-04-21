@@ -15,7 +15,9 @@
   <img src="koch_curve.png" alt="Normal Koch Curve">
    
      <p> This is a modified Koch Curve where the colors are randomized from a set of 5 colors, and there is an extra recursion that occurs in bewteen the third and fourth recursion.</p>
-     <pre><code>
+  
+  <img src="modified_koch_curve.png" alt="Modified Koch Curve">
+   <pre><code>
     def modified_koch_curve(t, depth, size):
     colors = ["black", "gray", "red", "silver", "purple"]
     t.color(colors[random.randrange(5)])
@@ -35,8 +37,6 @@
         modified_koch_curve(t, depth - 1, size)
 
     </code></pre>
-  <img src="modified_koch_curve.png" alt="Modified Koch Curve">
-
  <h2>Sierpinski Triangle</h2>
 <p>Normal Sierpinski Triangle sierpinski(t, 5, 500)</p>
 
