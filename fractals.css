@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   color: white;
-  background-color: #gray;
+  background-color: #808080;
+  text-align: center; 
 }
 
 h1 {
-  text-align: center;
-  color: black;
+  color: black; /
 }
 
 pre {
