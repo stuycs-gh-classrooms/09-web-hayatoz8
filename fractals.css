@@ -16,7 +16,10 @@ pre {
   border-radius: 5px;
   font-size: 14px;
 }
-
+code {
+  font-size: 12px;
+  color: white;
+}
 img {
   max-width: 100%;
   height: auto;
