@@ -1,36 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   color: gray;
-  background-color: #eaeaea;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  position: relative;
-  margin: 20px auto;
-  max-width: 800px;
+  background-color: #f2f2f2; /* Light gray */
 }
 
 h1 {
   text-align: center;
-  color: #3498db; 
-  margin-top: 0;
-}
-
-.content-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white; 
-  padding: 20px;
-  border-radius: 8px;
-  width: calc(100% - 40px);
-}
-
-.content {
-  max-width: 100%;
+  color: black;
 }
 
 pre {
