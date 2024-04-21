@@ -99,23 +99,35 @@
   <p> This is a modified Tree where as the recursion depth decreases, the line width and length decreases, resulting in a tapering effect towards the ends of the branches. modified_tree(t, 4, 50, 20, 3)</p>
   <img src="modified_tree1.png" alt="Modified Tree">
   <pre><code>
-    def modified_tree(t, depth, size, angle, width_factor):
-    if depth == 1:
+    def modified_tree(t, t1, depth, size, angle, width_factor):
+    t.color("pink")
+    t1.color("red")
+    if depth == 0:
         t.width(1)
         t.fd(size)
-        t.pu()
         t.bk(size)
-        t.pd()
     else:
         t.width(depth * width_factor)
         t.fd(size)
         t.rt(angle)
-        modified_tree(t, depth-1, size * 0.8, angle, width_factor)
+        modified_tree(t, t1, depth-1, size * 0.8, angle * 1.5, width_factor)
         t.lt(2 * angle)
-        modified_tree(t, depth-1, size * 0.8, angle, width_factor)
+        modified_tree(t, t1, depth-1, size * 0.8, angle * 1.5, width_factor)
         t.rt(angle)
-        t.pu()
         t.bk(size)
+    if depth == 0:
+        t1.width(1)
+        t1.fd(size)
+        t1.bk(size)
+    else:
+        t1.width(depth * width_factor)
+        t1.fd(size)
+        t1.rt(angle)
+        modified_tree(t, t1, depth-1, size * 0.8, angle * 1.5, width_factor)
+        t1.lt(2 * angle)
+        modified_tree(t, t1, depth-1, size * 0.8, angle * 1.5, width_factor)
+        t1.rt(angle)
+        t1.bk(size)
   </code></pre>
 
 
